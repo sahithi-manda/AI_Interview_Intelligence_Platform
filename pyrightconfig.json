@@ -1,0 +1,23 @@
+{
+  "include": [
+    "Backend"
+  ],
+  "exclude": [
+    "**/venv",
+    "**/venv_local",
+    "**/node_modules"
+  ],
+  "extraPaths": [
+    "Backend",
+    "Backend/app",
+    "Backend/venv_local/Lib/site-packages"
+  ],
+  "venvPath": "Backend",
+  "venv": "venv_local",
+  "typeCheckingMode": "off",
+  "reportMissingImports": "none",
+  "reportMissingModuleSource": "none",
+  "reportUndefinedVariable": "none",
+  "reportGeneralTypeIssues": "none",
+  "reportOptionalMemberAccess": "none"
+}

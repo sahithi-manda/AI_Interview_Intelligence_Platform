@@ -1,0 +1,23 @@
+{
+  "include": [
+    "app"
+  ],
+  "exclude": [
+    "**/venv",
+    "**/venv_local",
+    "**/node_modules"
+  ],
+  "extraPaths": [
+    ".",
+    "app",
+    "venv_local/Lib/site-packages"
+  ],
+  "venvPath": ".",
+  "venv": "venv_local",
+  "typeCheckingMode": "off",
+  "reportMissingImports": "none",
+  "reportMissingModuleSource": "none",
+  "reportUndefinedVariable": "none",
+  "reportGeneralTypeIssues": "none",
+  "reportOptionalMemberAccess": "none"
+}
