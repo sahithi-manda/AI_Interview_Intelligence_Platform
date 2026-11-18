@@ -29,6 +29,7 @@
   - [Frontend Setup](#2-frontend-setup)
 - [Environment Variables](#-environment-variables)
 - [API Endpoints Overview](#-api-endpoints-overview)
+- [Running Tests](#-running-tests)
 - [Security & Production Configuration](#-security--production-configuration)
 
 ---
@@ -227,6 +228,19 @@ Frontend will be available at `http://localhost:5173`.
 | `POST` | `/api/improvement/generate` | Generate personalized learning roadmap | Yes |
 
 ---
+
+## 🧪 Running Tests
+
+The backend tests use FastAPI's `TestClient` and mock the Gemini calls, so no API key or network access is needed. A local SQLite database is enough:
+
+```bash
+cd Backend
+export DATABASE_URL=sqlite:///./test.db GEMINI_API_KEY=dummy JWT_SECRET_KEY=test-secret
+python create_tables.py
+pytest tests/test_auth.py tests/test_pipeline.py
+```
+
+`tests/test_live_e2e.py` runs against the deployed backend and is meant for post-deployment checks.
 
 ## 🛡 Security & Production Configuration
 
